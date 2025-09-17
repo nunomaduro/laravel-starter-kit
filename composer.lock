@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b8f52bcd144b01fdbfcec7f6e408d41",
+    "content-hash": "4a4355592d28f522b4b28b56de40d452",
     "packages": [
         {
             "name": "brick/math",
@@ -2305,30 +2305,30 @@
         },
         {
             "name": "nunomaduro/essentials",
-            "version": "v0.1.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/essentials.git",
-                "reference": "ccfd36a8e7ec5ad7ce83109775bd75851b123a41"
+                "reference": "f0bded5eaa1552a3a1a8dbaab9c54bdd52df1cc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/essentials/zipball/ccfd36a8e7ec5ad7ce83109775bd75851b123a41",
-                "reference": "ccfd36a8e7ec5ad7ce83109775bd75851b123a41",
+                "url": "https://api.github.com/repos/nunomaduro/essentials/zipball/f0bded5eaa1552a3a1a8dbaab9c54bdd52df1cc1",
+                "reference": "f0bded5eaa1552a3a1a8dbaab9c54bdd52df1cc1",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^11.44.2|^12.17.0",
+                "laravel/framework": "^11.44.2|^12.29.0",
                 "php": "^8.3.0"
             },
             "require-dev": {
-                "laravel/pint": "^1.22.1",
-                "orchestra/testbench": "^10.3.0",
-                "pestphp/pest": "^3.8.2",
-                "pestphp/pest-plugin-type-coverage": "^3.5.1",
-                "phpstan/phpstan": "^2.1.17",
-                "rector/rector": "^2.0.17",
-                "symfony/var-dumper": "^7.3.0"
+                "laravel/pint": "^1.25.0",
+                "orchestra/testbench": "^10.6.0",
+                "pestphp/pest": "^3.8.4",
+                "pestphp/pest-plugin-type-coverage": "^3.6.1",
+                "phpstan/phpstan": "^2.1.27",
+                "rector/rector": "^2.1.7",
+                "symfony/var-dumper": "^7.3.3"
             },
             "type": "library",
             "extra": {
@@ -2363,7 +2363,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/essentials/issues",
-                "source": "https://github.com/nunomaduro/essentials/tree/v0.1.0"
+                "source": "https://github.com/nunomaduro/essentials/tree/v1.0.0"
             },
             "funding": [
                 {
@@ -2379,7 +2379,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-06-04T18:20:41+00:00"
+            "time": "2025-09-17T17:40:22+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -6763,16 +6763,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a"
+                "reference": "595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
-                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96",
+                "reference": "595de38458c6b0ab4cae4bcc769c2e5c5d5b8e96",
                 "shasum": ""
             },
             "require": {
@@ -6783,9 +6783,9 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.82.2",
-                "illuminate/view": "^11.45.1",
-                "larastan/larastan": "^3.5.0",
+                "friendsofphp/php-cs-fixer": "^3.87.2",
+                "illuminate/view": "^11.46.0",
+                "larastan/larastan": "^3.7.1",
                 "laravel-zero/framework": "^11.45.0",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3.1",
@@ -6796,9 +6796,6 @@
             ],
             "type": "project",
             "autoload": {
-                "files": [
-                    "overrides/Runner/Parallel/ProcessFactory.php"
-                ],
                 "psr-4": {
                     "App\\": "app/",
                     "Database\\Seeders\\": "database/seeders/",
@@ -6828,7 +6825,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-07-10T18:09:32+00:00"
+            "time": "2025-09-17T01:36:44+00:00"
         },
         {
             "name": "laravel/roster",
@@ -8213,16 +8210,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.26",
+            "version": "2.1.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "b13345001a8553ec405b7741be0c6b8d7f8b5bf5"
+                "reference": "25da374959afa391992792691093550b3098ef1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b13345001a8553ec405b7741be0c6b8d7f8b5bf5",
-                "reference": "b13345001a8553ec405b7741be0c6b8d7f8b5bf5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/25da374959afa391992792691093550b3098ef1e",
+                "reference": "25da374959afa391992792691093550b3098ef1e",
                 "shasum": ""
             },
             "require": {
@@ -8267,20 +8264,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-16T11:33:46+00:00"
+            "time": "2025-09-17T09:55:13+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "12.3.7",
+            "version": "12.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "bbede0f5593dad37af3be6a6f8e6ae1885e8a0a9"
+                "reference": "99e692c6a84708211f7536ba322bbbaef57ac7fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/bbede0f5593dad37af3be6a6f8e6ae1885e8a0a9",
-                "reference": "bbede0f5593dad37af3be6a6f8e6ae1885e8a0a9",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/99e692c6a84708211f7536ba322bbbaef57ac7fc",
+                "reference": "99e692c6a84708211f7536ba322bbbaef57ac7fc",
                 "shasum": ""
             },
             "require": {
@@ -8336,7 +8333,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.3.7"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.3.8"
             },
             "funding": [
                 {
@@ -8356,7 +8353,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-10T09:59:06+00:00"
+            "time": "2025-09-17T11:31:43+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -9950,9 +9947,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "nunomaduro/essentials": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
