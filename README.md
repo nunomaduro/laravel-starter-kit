@@ -17,6 +17,17 @@
 
 ```bash
 composer create-project nunomaduro/laravel-starter-kit --prefer-source example-app
+
+cd example-app
+
+composer install
+npm install
+npm run build
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+
+php artisan serve # serve the application...
 ```
 
 ## Features
