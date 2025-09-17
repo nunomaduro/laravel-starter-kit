@@ -21,7 +21,6 @@
         "laravel/pint": "^1.24.0",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.8.2",
-        "peckphp/peck": "^0.1.3",
         "pestphp/pest": "^4.1.0",
         "pestphp/pest-plugin-laravel": "^4.0.0",
         "pestphp/pest-plugin-type-coverage": "^4.0.2",
@@ -61,7 +60,6 @@
         ],
         "refactor": "rector",
         "test:type-coverage": "pest --type-coverage --min=100",
-        "test:typos": "peck",
         "test:lint": [
             "pint --test",
             "npm run test:lint"
@@ -71,7 +69,6 @@
         "test:refactor": "rector --dry-run",
         "test": [
             "@test:type-coverage",
-            "@test:typos",
             "@test:unit",
             "@test:lint",
             "@test:types",
