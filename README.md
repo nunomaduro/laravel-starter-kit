@@ -16,7 +16,7 @@
 ⚡️ Create your project using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/laravel-starter-kit --prefer-source example-app
+composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
 
 cd example-app
 
