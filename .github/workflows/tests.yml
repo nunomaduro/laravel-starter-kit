@@ -30,7 +30,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Node Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Assets
         run: npm run build
