@@ -23,16 +23,6 @@ jobs:
           tools: composer:v2
           coverage: xdebug
 
-      - name: Install Aspell
-        shell: bash
-        run: |
-          if [[ "$RUNNER_OS" == "Linux" ]]; then
-           sudo apt-get update && sudo apt-get install -y aspell aspell-en
-          elif [[ "$RUNNER_OS" == "macOS" ]]; then
-           brew install aspell
-          fi
-
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -40,10 +30,13 @@ jobs:
           cache: 'npm'
 
       - name: Install Node Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Assets
         run: npm run build
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
