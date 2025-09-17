@@ -9,6 +9,8 @@
 
 **Laravel Starter Kit** is my strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
 
+Tools like **PHPStan**, **Pest**, **Rector**, **Pint**, and **Prettier** are pre-configured to be as strict as possible. E.g: 100% type and code coverage, PHPStan level max, Rector with max privatization, and more...
+
 > **Requires [PHP 8.4+](https://php.net/releases/)**.
 
 ## Create Project
