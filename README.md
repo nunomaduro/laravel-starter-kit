@@ -7,7 +7,7 @@
     <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/nunomaduro/laravel-starter-kit" alt="License"></a>
 </p>
 
-Laravel Starter Kit is a laravel skeleton application with some of default I usually add to my projects.
+**Laravel Starter Kit** is my strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
 
 > **Requires [PHP 8.4+](https://php.net/releases/)**.
 
