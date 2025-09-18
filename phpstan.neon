@@ -8,3 +8,6 @@ parameters:
         - app/
 
     level: max
+
+    
+    tmpDir: /tmp/phpstan
