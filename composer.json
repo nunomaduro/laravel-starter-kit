@@ -71,6 +71,7 @@
             "npm run test:lint"
         ],
         "test:unit": "pest --parallel --coverage --exactly=100.0",
+        "test:unit-no-coverage": "pest --parallel",
         "test:types": "phpstan",
         "test": [
             "@test:type-coverage",
