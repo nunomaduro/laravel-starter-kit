@@ -72,7 +72,7 @@
         ],
         "test:unit": "pest --parallel --coverage --exactly=100.0",
         "test:unit-no-coverage": "pest --parallel",
-        "test:types": "phpstan",
+        "test:types": "php -d xdebug.mode=off vendor/bin/phpstan",
         "test": [
             "@test:type-coverage",
             "@test:unit",
