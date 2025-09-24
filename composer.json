@@ -60,13 +60,13 @@
             "@php artisan migrate --graceful --ansi"
         ],
         "lint": [
-            "pint",
+            "pint --parallel",
             "rector",
             "npm run lint"
         ],
         "test:type-coverage": "pest --type-coverage --min=100",
         "test:lint": [
-            "pint --test",
+            "pint --parallel --test",
             "rector --dry-run",
             "npm run test:lint"
         ],
