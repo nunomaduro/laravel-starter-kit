@@ -1,10 +1,27 @@
 {
     "mcpServers": {
         "laravel-boost": {
-            "command": "/Users/nunomaduro/Library/Application Support/Herd/bin/php84",
+            "command": "php",
             "args": [
-                "/Users/nunomaduro/Work/projects/nunomaduro/laravel-starter-kit/artisan",
+                "artisan",
                 "boost:mcp"
+            ],
+            "alwaysAllow": [
+                "application-info",
+                "browser-logs",
+                "database-connections",
+                "database-query",
+                "database-schema",
+                "get-absolute-url",
+                "get-config",
+                "last-error",
+                "list-artisan-commands",
+                "list-available-config-keys",
+                "list-available-env-vars",
+                "list-routes",
+                "read-log-entries",
+                "report-feedback",
+                "search-docs"
             ]
         }
     }
