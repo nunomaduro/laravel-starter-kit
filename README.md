@@ -21,9 +21,9 @@ Modern PHP has evolved into a mature, type-safe language, yet many Laravel proje
 
 This isn't just another Laravel boilerplate—it's a statement that PHP applications can and should be built with the same rigor as strongly-typed languages like Rust or TypeScript.
 
-> **Requires [PHP 8.4+](https://php.net/releases/)**.
-
 ## Getting Started
+
+> **Requires [PHP 8.4+](https://php.net/releases/)**.
 
 Create your type-safe Laravel application using [Composer](https://getcomposer.org):
 
@@ -53,7 +53,7 @@ php artisan key:generate
 php artisan migrate
 
 # Start the development server
-php artisan serve
+composer dev
 ```
 
 ### Optional: Browser Testing Setup
@@ -75,61 +75,23 @@ composer test
 
 You should see 100% test coverage and all quality checks passing.
 
-## Features
+## Available Tooling
 
-🥃 Comes with Laravel [Essentials](https://github.com/nunomaduro/essentials), changes defaults in Laravel for more strict usage:
-- Strict Models
-- Auto Eager Loading
-- Immutable Dates
-- Force HTTPS
-- Safe Console
-- Asset Prefetching
-- and more...
+### Development
+- `composer dev` - Starts Laravel server, queue worker, log monitoring, and Vite dev server concurrently
 
-🧹 Keep a modern codebase with **Pint**, **Rector**, and **Prettier**:
+### Code Quality
+- `composer lint` - Runs Rector (refactoring), Pint (PHP formatting), and Prettier (JS/TS formatting)
+- `composer test:lint` - Dry-run mode for CI/CD pipelines
 
-> Every single rule in these tools is customized so they are most strict as possible.
+### Testing
+- `composer test:type-coverage` - Ensures 100% type coverage with Pest
+- `composer test:types` - Runs PHPStan at level 9 (maximum strictness)
+- `composer test:unit` - Runs Pest tests with 100% code coverage requirement
+- `composer test` - Runs the complete test suite (type coverage, unit tests, linting, static analysis)
 
-```bash
-composer lint
-composer test:lint # on ci...
-```
-
-🧨 Check type coverage with **Pest**:
-```bash
-composer test:type-coverage # 100% type coverage...
-```
-
-⚗️ Run static analysis using **PHPStan**:
-```bash
-composer test:types # level max by default
-```
-
-✅ Run unit tests using **PEST**
-```bash
-composer test:unit # 100% test coverage...
-```
-
-🚀 Run the entire test suite:
-```bash
-composer test # the entire test suite...
-```
-
-⚙️ Better defaults for testing, including:
-- Fake sleeps
-- Stray http requests
-- Browser testing
-- and more...
-
-💭 Different application structure with:
-- `app/Actions` - for application actions
-- `app/Enums` - for enumerations
-- and more...
-
-🤖 Agent coding style rules with **Laravel Boost**, with support for:
-- PHPStorm Junie
-- Claude AI
-- and more...
+### Maintenance
+- `composer update:requirements` - Updates all PHP and NPM dependencies to latest versions
 
 ## License
 
