@@ -32,6 +32,8 @@ php artisan migrate
 php artisan serve # serve the application...
 ```
 
+> Planning on using browser testing? You may have to run `npm install playwright && npx playwright install`.
+
 ## Features
 
 🥃 Comes with Laravel [Essentials](https://github.com/nunomaduro/essentials), changes defaults in Laravel for more strict usage:
