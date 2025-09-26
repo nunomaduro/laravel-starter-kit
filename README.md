@@ -7,9 +7,19 @@
     <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/nunomaduro/laravel-starter-kit" alt="License"></a>
 </p>
 
-**Laravel Starter Kit** is my strict [Laravel](https://laravel.com) skeleton - for those who demand meticulous precision in their projects.
+**Laravel Starter Kit** is an ultra-strict, type-safe [Laravel](https://laravel.com) skeleton engineered for developers who refuse to compromise on code quality. This opinionated starter kit enforces rigorous development standards through meticulous tooling configuration and architectural decisions that prioritize type safety, immutability, and fail-fast principles.
 
-Tools like **PHPStan**, **Pest**, **Rector**, **Pint**, and **Prettier** are pre-configured to be as strict as possible. E.g: 100% type and code coverage, PHPStan level max, Rector with max privatization, and more...
+## Why This Starter Kit?
+
+Modern PHP has evolved into a mature, type-safe language, yet many Laravel projects still operate with loose conventions and optional typing. This starter kit changes that paradigm by enforcing:
+
+- **100% Type Coverage**: Every method, property, and parameter is explicitly typed
+- **Zero Tolerance for Code Smells**: Rector and PHPStan at maximum strictness catch issues before they become bugs
+- **Immutable-First Architecture**: Data structures favor immutability to prevent unexpected mutations
+- **Fail-Fast Philosophy**: Errors are caught at compile-time, not runtime
+- **Automated Code Quality**: Pre-configured tools ensure consistent, pristine code across your entire team
+
+This isn't just another Laravel boilerplate—it's a statement that PHP applications can and should be built with the same rigor as strongly-typed languages like Rust or TypeScript.
 
 > **Requires [PHP 8.4+](https://php.net/releases/)**.
 
