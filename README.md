@@ -23,26 +23,57 @@ This isn't just another Laravel boilerplate—it's a statement that PHP applicat
 
 > **Requires [PHP 8.4+](https://php.net/releases/)**.
 
-## Create Project
+## Getting Started
 
-⚡️ Create your project using [Composer](https://getcomposer.org):
+Create your type-safe Laravel application using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
-
-cd example-app
-
-composer install
-npm install
-npm run build
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-
-php artisan serve # serve the application...
 ```
 
-> Planning on using browser testing? You may have to run `npm install playwright && npx playwright install`.
+### Initial Setup
+
+Navigate to your project and complete the setup:
+
+```bash
+cd example-app
+
+# Install PHP dependencies with optimized autoloader
+composer install
+
+# Install and build frontend assets
+npm install
+npm run build
+
+# Configure your environment
+cp .env.example .env
+php artisan key:generate
+
+# Run database migrations
+php artisan migrate
+
+# Start the development server
+php artisan serve
+```
+
+### Optional: Browser Testing Setup
+
+If you plan to use Pest's browser testing capabilities:
+
+```bash
+npm install playwright
+npx playwright install
+```
+
+### Verify Installation
+
+Run the test suite to ensure everything is configured correctly:
+
+```bash
+composer test
+```
+
+You should see 100% test coverage and all quality checks passing.
 
 ## Features
 
