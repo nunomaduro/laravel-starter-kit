@@ -14,8 +14,6 @@ use Illuminate\Support\Str;
  */
 final class UserFactory extends Factory
 {
-    public $hasher;
-
     /**
      * The current password being used by the factory.
      */
