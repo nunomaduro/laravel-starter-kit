@@ -60,6 +60,10 @@
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ],
+        "update:requirements": [
+            "composer bump",
+            "npx npm-check-updates -u"
+        ],
         "lint": [
             "rector",
             "pint --parallel",
