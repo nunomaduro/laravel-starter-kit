@@ -7,6 +7,12 @@ parameters:
 
     paths:
         - app
+        - bootstrap/app.php
+        - config
+        - database
+        - public
+        - routes
+
 
     level: max
 
