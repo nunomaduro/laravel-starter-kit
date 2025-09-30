@@ -31,6 +31,10 @@ Create your type-safe Laravel application using [Composer](https://getcomposer.o
 ```bash
 composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
 ```
+Or use the Laravel Installer
+```bash
+laravel new --using=https://github.com/nunomaduro/laravel-starter-kit example-app
+```
 
 ### Initial Setup
 
