@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://youtu.be/JUDQuymlsh0" target="_blank">
+    <a href="https://youtu.be/VhzP0XWGTC4" target="_blank">
         <img src="/art/banner.png" alt="Overview Laravel Starter Kit" style="width:70%;">
     </a>
 </p>
