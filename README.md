@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://youtu.be/JUDQuymlsh0" target="_blank">
-        <img src="/art/play.png" alt="Overview Laravel Starter Kit" style="width:70%;">
+        <img src="/art/banner.png" alt="Overview Laravel Starter Kit" style="width:70%;">
     </a>
 </p>
 
