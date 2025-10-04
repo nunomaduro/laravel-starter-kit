@@ -1,4 +1,8 @@
-# Laravel Starter Kit
+<p align="center">
+    <a href="https://youtu.be/JUDQuymlsh0" target="_blank">
+        <img src="/art/play.png" alt="Overview Laravel Starter Kit" style="width:70%;">
+    </a>
+</p>
 
 <p>
     <a href="https://github.com/nunomaduro/laravel-starter-kit/actions"><img src="https://github.com/nunomaduro/laravel-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
