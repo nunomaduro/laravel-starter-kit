@@ -1,28 +1,20 @@
 {
     "mcpServers": {
         "laravel-boost": {
-            "command": "php",
+            "command": "/Users/andreagroferreira/Library/Application Support/Herd/bin/php84",
             "args": [
-                "artisan",
+                "/Users/andreagroferreira/Herd/laravel-starter-kit/artisan",
                 "boost:mcp"
-            ],
-            "alwaysAllow": [
-                "application-info",
-                "browser-logs",
-                "database-connections",
-                "database-query",
-                "database-schema",
-                "get-absolute-url",
-                "get-config",
-                "last-error",
-                "list-artisan-commands",
-                "list-available-config-keys",
-                "list-available-env-vars",
-                "list-routes",
-                "read-log-entries",
-                "report-feedback",
-                "search-docs"
             ]
+        },
+        "herd": {
+            "command": "/Users/andreagroferreira/Library/Application Support/Herd/bin/php84",
+            "args": [
+                "/Applications/Herd.app/Contents/Resources/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "/Users/andreagroferreira/Herd/laravel-starter-kit"
+            }
         }
     }
 }

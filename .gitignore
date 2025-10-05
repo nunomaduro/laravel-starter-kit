@@ -23,3 +23,16 @@ yarn-error.log
 /.vscode
 /.zed
 /tmp
+.claude/agents
+.claude/rules.md
+.claude/project-context.md
+.claude/config.yml
+.claude/commands/new-action.md
+.claude/commands/new-api.md
+.claude/commands/new-feature.md
+.claude/commands/fix-bug.md
+.claude/commands/optimize.md
+.claude/commands/quick-test.md
+.claude/validators
+.claude/commands/document.md
+.claude/agents/documentation-master.md
