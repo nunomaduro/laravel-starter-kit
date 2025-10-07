@@ -103,7 +103,8 @@ return [
 
     'previous_keys' => [
         ...array_filter(
-            explode(',', (string) env('APP_PREVIOUS_KEYS', ''))
+            explode(',', (string) env('APP_PREVIOUS_KEYS', '')),
+            static fn (bool|string|null $value): bool => is_string($value) && trim($value) !== '',
         ),
     ],
 
