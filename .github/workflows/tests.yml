@@ -28,15 +28,6 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install Node Dependencies
-        run: npm install
-
-      - name: Build Assets
-        run: npm run build
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
@@ -45,6 +36,15 @@ jobs:
 
       - name: Generate Application Key
         run: php artisan key:generate
+
+      - name: Install Node Dependencies
+        run: npm install
+
+      - name: Build Assets
+        run: npm run build
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
       - name: Rector Cache
         uses: actions/cache@v4
