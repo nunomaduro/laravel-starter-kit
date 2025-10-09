@@ -64,3 +64,10 @@ jobs:
 
       - name: Tests
         run: composer test
+
+      - name: Store Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-screenshots
+          path: |
+            tests/Browser/Screenshots
