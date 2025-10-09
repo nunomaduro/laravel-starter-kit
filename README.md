@@ -1,4 +1,4 @@
-> This **Laravel Starter Kit** is the Blade version of the original [Laravel Starter Kit](https://github.com/nunomaduro/laravel-starter-kit). If you are looking for the Inertia & React version version, please visit the [main repository](https://github.com/nunomaduro/laravel-starter-kit-inertia-react).
+> This **Laravel Starter Kit** is the Blade version of the original [Laravel Starter Kit](https://github.com/nunomaduro/laravel-starter-kit). If you are looking for the Inertia & React version version, please visit the [Inertia & React repository](https://github.com/nunomaduro/laravel-starter-kit-inertia-react).
 
 <p align="center">
     <a href="https://youtu.be/VhzP0XWGTC4" target="_blank">
