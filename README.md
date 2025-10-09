@@ -43,19 +43,8 @@ Navigate to your project and complete the setup:
 ```bash
 cd example-app
 
-# Install PHP dependencies with optimized autoloader
-composer install
-
-# Install and build frontend assets
-npm install
-npm run build
-
-# Configure your environment
-cp .env.example .env
-php artisan key:generate
-
-# Run database migrations
-php artisan migrate
+# Setup project
+composer setup
 
 # Start the development server
 composer dev
