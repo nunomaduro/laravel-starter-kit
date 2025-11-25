@@ -1,0 +1,71 @@
+name: Update Dependencies
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+          tools: composer:v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Update Composer Dependencies
+        run: |
+          composer bump
+          composer update --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Update NPM Dependencies
+        run: |
+          npx npm-check-updates -u
+          npm install
+
+      - name: Rector Cache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/rector
+          key: ${{ runner.os }}-rector-${{ hashFiles('composer.lock') }}
+          restore-keys: ${{ runner.os }}-rector-
+      - run: mkdir -p /tmp/rector
+
+      - name: Run Rector
+        run: vendor/bin/rector process --no-diffs
+
+      - name: Run Pint
+        run: vendor/bin/pint
+
+      - name: Run Tests
+        run: composer test
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update dependencies and apply automated fixes"
+          title: "chore: update dependencies"
+          body: |
+            This PR updates composer and npm dependencies, and applies automated fixes using Rector and Pint.
+
+            - `composer bump`
+            - `composer update`
+            - `npx npm-check-updates -u`
+            - `npm install`
+            - `rector`
+            - `pint`
+          branch: update-dependencies
+          base: main
+          delete-branch: true
