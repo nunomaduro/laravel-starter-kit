@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravolt/laravel-starter-kit",
+    "name": "qisthidev/laravolt-starter-kit",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
