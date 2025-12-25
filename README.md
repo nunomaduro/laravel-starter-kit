@@ -7,7 +7,7 @@
 
 # Laravolt Starter Kit
 
-Personal Laravel starter kit with strict type-safety and code quality tools for [Laravolt](https://github.com/laravolt/laravolt).
+Personal Laravel starter kit with strict type-safety and code quality tools for [Laravolt](https://github.com/laravolt/laravolt) in Agentic era.
 
 ## Why This Starter Kit?
 
