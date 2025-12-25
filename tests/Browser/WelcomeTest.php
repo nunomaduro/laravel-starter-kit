@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 it('has welcome page', function (): void {
-    $page = visit('/');
+    $page = visit('/auth/login');
 
-    $page->assertSee('Laravel');
+    $page->assertSee('Login');
 });
