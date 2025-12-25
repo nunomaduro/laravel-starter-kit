@@ -1,21 +1,13 @@
-- Blade (this project) version: **[github.com/nunomaduro/laravel-starter-kit](https://github.com/nunomaduro/laravel-starter-kit)**
-- Inertia & React version: **[github.com/nunomaduro/laravel-starter-kit-inertia-react](https://github.com/nunomaduro/laravel-starter-kit-inertia-react)**
-
-
-<p align="center">
-    <a href="https://youtu.be/VhzP0XWGTC4" target="_blank">
-        <img src="/art/banner.png" alt="Overview Laravel Starter Kit" style="width:70%;">
-    </a>
-</p>
-
 <p>
-    <a href="https://github.com/nunomaduro/laravel-starter-kit/actions"><img src="https://github.com/nunomaduro/laravel-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/dt/nunomaduro/laravel-starter-kit" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/v/nunomaduro/laravel-starter-kit" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/nunomaduro/laravel-starter-kit" alt="License"></a>
+    <a href="https://github.com/qisthidev/laravolt-starter-kit/actions"><img src="https://github.com/qisthidev/laravolt-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/qisthidev/laravolt-starter-kit"><img src="https://img.shields.io/packagist/dt/qisthidev/laravolt-starter-kit" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/qisthidev/laravolt-starter-kit"><img src="https://img.shields.io/packagist/v/qisthidev/laravolt-starter-kit" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/qisthidev/laravolt-starter-kit"><img src="https://img.shields.io/packagist/l/qisthidev/laravolt-starter-kit" alt="License"></a>
 </p>
 
-**Laravel Starter Kit** is an ultra-strict, type-safe [Laravel](https://laravel.com) skeleton engineered for developers who refuse to compromise on code quality. This opinionated starter kit enforces rigorous development standards through meticulous tooling configuration and architectural decisions that prioritize type safety, immutability, and fail-fast principles.
+# Laravolt Starter Kit
+
+Personal Laravel starter kit with strict type-safety and code quality tools for [Laravolt](https://github.com/laravolt/laravolt).
 
 ## Why This Starter Kit?
 
@@ -37,7 +29,7 @@ This isn't just another Laravel boilerplate—it's a statement that PHP applicat
 Create your type-safe Laravel application using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
+composer create-project qisthidev/laravolt-starter-kit --prefer-dist example-app
 ```
 
 ### Initial Setup
@@ -76,21 +68,25 @@ You should see 100% test coverage and all quality checks passing.
 ## Available Tooling
 
 ### Development
+
 - `composer dev` - Starts Laravel server, queue worker, log monitoring, and Vite dev server concurrently
 
 ### Code Quality
+
 - `composer lint` - Runs Rector (refactoring), Pint (PHP formatting), and Prettier (JS/TS formatting)
 - `composer test:lint` - Dry-run mode for CI/CD pipelines
 
 ### Testing
+
 - `composer test:type-coverage` - Ensures 100% type coverage with Pest
 - `composer test:types` - Runs PHPStan at level 9 (maximum strictness)
 - `composer test:unit` - Runs Pest tests with 100% code coverage requirement
 - `composer test` - Runs the complete test suite (type coverage, unit tests, linting, static analysis)
 
 ### Maintenance
+
 - `composer update:requirements` - Updates all PHP and NPM dependencies to latest versions
 
-## License
+---
 
-**Laravel Starter Kit** was created by **[Nuno Maduro](https://x.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
+Based on [qisthidev/laravolt-starter-kit](https://github.com/qisthidev/laravolt-starter-kit).
