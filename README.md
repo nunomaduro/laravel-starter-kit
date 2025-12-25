@@ -1,5 +1,5 @@
-- Blade (this project) version: **[github.com/nunomaduro/laravel-starter-kit](https://github.com/nunomaduro/laravel-starter-kit)**
-- Inertia & React version: **[github.com/nunomaduro/laravel-starter-kit-inertia-react](https://github.com/nunomaduro/laravel-starter-kit-inertia-react)**
+- Blade (this project) version: **[github.com/laravolt/laravel-starter-kit](https://github.com/laravolt/laravel-starter-kit)**
+- Inertia & React version: **[github.com/laravolt/laravel-starter-kit-inertia-react](https://github.com/laravolt/laravel-starter-kit-inertia-react)**
 
 
 <p align="center">
@@ -9,10 +9,10 @@
 </p>
 
 <p>
-    <a href="https://github.com/nunomaduro/laravel-starter-kit/actions"><img src="https://github.com/nunomaduro/laravel-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/dt/nunomaduro/laravel-starter-kit" alt="Total Downloads"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/v/nunomaduro/laravel-starter-kit" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/nunomaduro/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/nunomaduro/laravel-starter-kit" alt="License"></a>
+    <a href="https://github.com/laravolt/laravel-starter-kit/actions"><img src="https://github.com/laravolt/laravel-starter-kit/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/laravolt/laravel-starter-kit"><img src="https://img.shields.io/packagist/dt/laravolt/laravel-starter-kit" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/laravolt/laravel-starter-kit"><img src="https://img.shields.io/packagist/v/laravolt/laravel-starter-kit" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/laravolt/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/laravolt/laravel-starter-kit" alt="License"></a>
 </p>
 
 **Laravel Starter Kit** is an ultra-strict, type-safe [Laravel](https://laravel.com) skeleton engineered for developers who refuse to compromise on code quality. This opinionated starter kit enforces rigorous development standards through meticulous tooling configuration and architectural decisions that prioritize type safety, immutability, and fail-fast principles.
@@ -37,7 +37,7 @@ This isn't just another Laravel boilerplate—it's a statement that PHP applicat
 Create your type-safe Laravel application using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/laravel-starter-kit --prefer-dist example-app
+composer create-project laravolt/laravel-starter-kit --prefer-dist example-app
 ```
 
 ### Initial Setup
@@ -93,4 +93,6 @@ You should see 100% test coverage and all quality checks passing.
 
 ## License
 
-**Laravel Starter Kit** was created by **[Nuno Maduro](https://x.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
+**Laravel Starter Kit** was created by **[Laravolt](https://github.com/laravolt)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
+
+Based on the original work by **[Nuno Maduro](https://x.com/enunomaduro)**.

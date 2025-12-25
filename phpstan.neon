@@ -2,6 +2,7 @@ includes:
     - vendor/larastan/larastan/extension.neon
     - vendor/nesbot/carbon/extension.neon
     - phar://phpstan.phar/conf/bleedingEdge.neon
+    - ./vendor/spaze/phpstan-disallowed-calls/extension.neon
 
 parameters:
 
@@ -13,7 +14,29 @@ parameters:
         - public
         - routes
 
-
     level: max
 
     tmpDir: /tmp/phpstan
+
+    disallowedFunctionCalls:
+        -
+            function: 'env()'
+            message: 'Use config() instead - see: https://laravel.com/docs/configuration#retrieving-configuration-values'
+        -
+            function: 'dd()'
+            message: 'Remove debug statements - use proper logging instead'
+        -
+            function: 'dump()'
+            message: 'Remove debug statements - use proper logging instead'
+        -
+            function: 'var_dump()'
+            message: 'Remove debug statements - use proper logging or testing assertions'
+        -
+            function: 'print_r()'
+            message: 'Use proper logging instead: Log::info() or logger()'
+        -
+            function: 'exit()'
+            message: 'Avoid exit() - use proper exception handling and HTTP responses'
+        -
+            function: 'die()'
+            message: 'Avoid die() - use proper exception handling and HTTP responses'
