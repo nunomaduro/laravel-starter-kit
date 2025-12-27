@@ -89,4 +89,4 @@ You should see 100% test coverage and all quality checks passing.
 
 ---
 
-Based on [qisthidev/laravolt-starter-kit](https://github.com/qisthidev/laravolt-starter-kit).
+Based on [nunomaduro/laravel-starter-kit](https://github.com/nunomaduro/laravel-starter-kit).
