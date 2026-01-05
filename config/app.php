@@ -125,4 +125,24 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Preferred Editor
+    |--------------------------------------------------------------------------
+    |
+    | This option specifies your preferred code editor used by Laravel when
+    | generating clickable links in dump output and exception traces. When
+    | configured, clicking file paths will open the file directly in your
+    | editor at the correct line number.
+    |
+    | Supported: "antigravity", "atom", "cursor", "emacs", "fleet", "idea",
+    |            "kiro", "macvim", "neovim", "netbeans", "nova", "phpstorm",
+    |            "sublime", "textmate", "trae", "vscode", "vscode-insiders",
+    |            "vscode-insiders-remote", "vscode-remote", "vscodium",
+    |            "windsurf", "xdebug", "zed"
+    |
+    */
+
+    'editor' => env('APP_EDITOR'),
+
 ];
