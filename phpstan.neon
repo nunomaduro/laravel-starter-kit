@@ -22,6 +22,8 @@ parameters:
         -
             function: 'env()'
             message: 'Use config() instead - see: https://laravel.com/docs/configuration#retrieving-configuration-values'
+            allowIn:
+                - config/*.php
         -
             function: 'dd()'
             message: 'Remove debug statements - use proper logging instead'

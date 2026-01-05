@@ -78,6 +78,9 @@ jobs:
           restore-keys: ${{ runner.os }}-phpstan-
       - run: mkdir -p /tmp/phpstan
 
+      - name: Laravolt Things
+        run: php artisan laravolt:link
+
       - name: Tests
         run: composer test
 
@@ -87,3 +90,50 @@ jobs:
           name: browser-screenshots
           path: |
             tests/Browser/Screenshots
+
+      - name: Store coverage reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-reports
+          path: coverage/
+          retention-days: 1
+
+  sonarqube:
+    name: SonarQube Analysis
+    runs-on: ubuntu-latest
+    needs: ci
+    if: success()
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Download coverage reports
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-reports
+          path: coverage/
+
+      - name: Verify Config
+        run: |
+          echo "Checking for properties file..."
+          if [ -f sonar-project.properties ]; then
+            ls -la sonar-project.properties
+            echo "Content of sonar-project.properties:"
+            cat sonar-project.properties
+          else
+            echo "ERROR: sonar-project.properties FILE MISSING!"
+            exit 1
+          fi
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
