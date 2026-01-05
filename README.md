@@ -5,7 +5,7 @@
     <a href="https://packagist.org/packages/laravolt/laravel-starter-kit"><img src="https://img.shields.io/packagist/l/laravolt/laravel-starter-kit" alt="License"></a>
 </p>
 
-# Laravolt Starter Kit
+# Laravel Starter Kit
 
 Official Laravel starter kit with strict type-safety and code quality tools for [Laravolt](https://github.com/laravolt/laravolt) in Agentic era.
 
