@@ -24,6 +24,16 @@ pest()->extend(TestCase::class)
 
 expect()->extend('toBeOne', fn () => $this->toBe(1));
 
+pest()->presets()->custom('strictWithoutProtectedMethods', function (array $userNamespaces): array {
+    return [
+        ...array_map(fn (string $namespace): Pest\Arch\Contracts\ArchExpectation => expect($namespace)->toUseStrictTypes(), $userNamespaces),
+        ...array_map(fn (string $namespace): Pest\Arch\Contracts\ArchExpectation => expect($namespace)->toUseStrictEquality(), $userNamespaces),
+        ...array_map(fn (string $namespace): Pest\Arch\Contracts\ArchExpectation => expect($namespace)->classes()->not->toBeAbstract(), $userNamespaces),
+        ...array_map(fn (string $namespace): Pest\Arch\Contracts\ArchExpectation => expect($namespace)->classes()->toBeFinal(), $userNamespaces),
+        expect(['sleep', 'usleep'])->not->toBeUsed(),
+    ];
+});
+
 function something(): void
 {
     // ..
