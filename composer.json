@@ -61,7 +61,7 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "@php artisan clear",
             "@update:requirements",
-            "@php artisan boost:update --ansi"
+            "@php artisan boost:update --ansi || 0"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
