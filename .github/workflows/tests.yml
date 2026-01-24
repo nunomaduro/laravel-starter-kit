@@ -8,9 +8,14 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   ci:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -26,8 +31,22 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
+      - name: Cache Composer Dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Cache Bun Dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lockb') }}
+          restore-keys: ${{ runner.os }}-bun-
+
       - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress
 
       - name: Copy Environment File
         run: cp .env.example .env
@@ -36,7 +55,7 @@ jobs:
         run: php artisan key:generate
 
       - name: Install Bun Dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: Build Assets
         run: bun run build
@@ -60,28 +79,29 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: bunx playwright install-deps
 
-      - name: Rector Cache
+      - name: Cache Rector
         uses: actions/cache@v4
         with:
           path: /tmp/rector
           key: ${{ runner.os }}-rector-${{ hashFiles('composer.lock') }}
           restore-keys: ${{ runner.os }}-rector-
-      - run: mkdir -p /tmp/rector
 
-      - name: PHPStan Cache
+      - name: Cache PHPStan
         uses: actions/cache@v4
         with:
           path: /tmp/phpstan
           key: ${{ runner.os }}-phpstan-${{ hashFiles('composer.lock') }}
           restore-keys: ${{ runner.os }}-phpstan-
-      - run: mkdir -p /tmp/phpstan
+
+      - name: Create Cache Directories
+        run: mkdir -p /tmp/rector /tmp/phpstan
 
       - name: Tests
         run: composer test
 
       - name: Store Artifacts
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: browser-screenshots
-          path: |
-            tests/Browser/Screenshots
+          path: tests/Browser/Screenshots
