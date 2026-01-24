@@ -14,19 +14,4 @@ final class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
-    public function boot(): void
-    {
-        $this->bootPasswordDefaults();
-    }
-
-    /**
-     * @codeCoverageIgnore
-     */
-    private function bootPasswordDefaults(): void
-    {
-        if ($this->app->isProduction()) {
-            Password::defaults(fn () => Password::min(12)->max(255)->uncompromised());
-        }
-    }
 }
