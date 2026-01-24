@@ -1,0 +1,9 @@
+{
+    "agents": [
+        "claude_code",
+        "cursor",
+        "opencode",
+        "phpstorm"
+    ],
+    "guidelines": []
+}
