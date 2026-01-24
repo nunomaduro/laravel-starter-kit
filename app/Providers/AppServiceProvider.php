@@ -26,8 +26,13 @@ final class AppServiceProvider extends ServiceProvider
         Model::unguard();
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     private function bootPasswordDefaults(): void
     {
-        Password::defaults(fn () => app()->isLocal() || app()->runningUnitTests() ? Password::min(12)->max(255) : Password::min(12)->max(255)->uncompromised());
+        if ($this->app->isProduction()) {
+            Password::defaults(fn () => Password::min(12)->max(255)->uncompromised());
+        }
     }
 }
