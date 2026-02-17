@@ -11,24 +11,24 @@
     "license": "MIT",
     "require": {
         "php": "^8.4.0",
-        "laravel/framework": "^12.44.0",
+        "laravel/framework": "^12.51.0",
         "nunomaduro/essentials": "^1.0.1"
     },
     "require-dev": {
-        "driftingly/rector-laravel": "^2.1.8",
+        "driftingly/rector-laravel": "^2.1.9",
         "fakerphp/faker": "^1.24.1",
-        "larastan/larastan": "^3.8.1",
-        "laravel/boost": "^1.8.7",
-        "laravel/pail": "^1.2.4",
-        "laravel/pint": "^1.26.0",
+        "larastan/larastan": "^3.9.2",
+        "laravel/boost": "^1.8.10",
+        "laravel/pail": "^1.2.6",
+        "laravel/pint": "^1.27.1",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^8.8.3",
-        "pestphp/pest": "^4.2.0",
-        "pestphp/pest-plugin-browser": "^4.1.1",
+        "nunomaduro/collision": "^8.9.0",
+        "pestphp/pest": "^4.3.2",
+        "pestphp/pest-plugin-browser": "^4.2.1",
         "pestphp/pest-plugin-laravel": "^4.0.0",
         "pestphp/pest-plugin-type-coverage": "^4.0.3",
-        "rector/rector": "^2.2.14",
-        "spaze/phpstan-disallowed-calls": "^4.7"
+        "rector/rector": "^2.3.6",
+        "spaze/phpstan-disallowed-calls": "^4.8"
     },
     "autoload": {
         "psr-4": {
@@ -48,12 +48,12 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
             "@php artisan migrate --force",
-            "npm install",
-            "npm run build"
+            "bun install",
+            "bun run build"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+            "bunx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"bun run dev\" --names=server,queue,logs,vite --kill-others"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -62,7 +62,8 @@
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "@php artisan clear",
-            "@update:requirements"
+            "@update:requirements",
+            "@php artisan boost:update --ansi || true"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -74,20 +75,20 @@
         ],
         "update:requirements": [
             "composer bump",
-            "npx npm-check-updates -u"
+            "bunx npm-check-updates -u"
         ],
         "lint": [
             "rector",
             "pint --parallel",
-            "npm run lint"
+            "bun run lint"
         ],
         "test:type-coverage": "pest --type-coverage --min=100",
         "test:lint": [
             "pint --parallel --test",
             "rector --dry-run",
-            "npm run test:lint"
+            "bun run test:lint"
         ],
-        "test:unit": "pest --parallel --coverage --exactly=100.0",
+        "test:unit": "XDEBUG_MODE=\"coverage\" pest --parallel --coverage --exactly=100.0",
         "test:types": "phpstan",
         "test": [
             "@test:type-coverage",

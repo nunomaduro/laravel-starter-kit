@@ -10,13 +10,13 @@
     "devDependencies": {
         "@tailwindcss/vite": "^4.1.18",
         "concurrently": "^9.2.1",
-        "laravel-vite-plugin": "^2.0.1",
-        "npm-check-updates": "^19.2.0",
-        "playwright": "^1.57.0",
-        "prettier": "^3.7.4",
+        "laravel-vite-plugin": "^2.1.0",
+        "npm-check-updates": "^19.3.2",
+        "playwright": "^1.58.2",
+        "prettier": "^3.8.1",
         "prettier-plugin-organize-imports": "^4.3.0",
         "prettier-plugin-tailwindcss": "^0.7.2",
         "tailwindcss": "^4.1.18",
-        "vite": "^7.3.0"
+        "vite": "^7.3.1"
     }
 }
