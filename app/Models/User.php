@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Carbon\CarbonInterface;
-use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -24,8 +23,9 @@ use Illuminate\Notifications\Notifiable;
  */
 final class User extends Authenticatable implements MustVerifyEmail
 {
-    /** @use HasFactory<UserFactory> */
-    use HasFactory, HasUuids, Notifiable;
+    use HasFactory;
+    use HasUuids;
+    use Notifiable;
 
     /**
      * @var list<string>
