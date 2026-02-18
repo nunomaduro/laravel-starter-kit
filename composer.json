@@ -20,6 +20,7 @@
         "laravel/boost": "^1.8.10",
         "laravel/pail": "^1.2.6",
         "laravel/pint": "^1.27.1",
+        "laravel/tinker": "^2.11.1",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.9.1",
         "pestphp/pest": "^4.4.1",
