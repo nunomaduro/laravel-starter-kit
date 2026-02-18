@@ -90,7 +90,7 @@ You should see 100% test coverage and all quality checks passing.
 - `composer test` - Runs the complete test suite (type coverage, unit tests, linting, static analysis)
 
 ### Maintenance
-- `composer update:requirements` - Updates all PHP and NPM dependencies to latest versions
+- `composer update:requirements` - Updates all PHP and Bun dependencies to latest versions
 
 ## License
 
