@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.5.0",
         "laravel/framework": "^12.52.0",
-        "nunomaduro/essentials": "^1.0.1"
+        "nunomaduro/essentials": "^1.1.0"
     },
     "require-dev": {
         "driftingly/rector-laravel": "^2.1.9",
