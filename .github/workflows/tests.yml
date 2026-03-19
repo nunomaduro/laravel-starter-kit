@@ -60,7 +60,7 @@ jobs:
         run: php artisan key:generate
 
       - name: Install Bun Dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build Assets
         run: bun run build
