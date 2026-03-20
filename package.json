@@ -8,12 +8,12 @@
         "test:lint": "vp fmt --check resources/"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.2.1",
+        "@tailwindcss/vite": "^4.2.2",
         "concurrently": "^9.2.1",
-        "laravel-vite-plugin": "^2.1.0",
-        "npm-check-updates": "^19.6.3",
+        "laravel-vite-plugin": "^3.0.0",
+        "npm-check-updates": "^19.6.5",
         "playwright": "^1.58.2",
-        "tailwindcss": "^4.2.1",
+        "tailwindcss": "^4.2.2",
         "vite": "npm:@voidzero-dev/vite-plus-core@latest",
         "vite-plus": "latest"
     },
