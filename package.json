@@ -4,8 +4,8 @@
     "scripts": {
         "build": "vp build",
         "dev": "vp dev",
-        "lint": "vp fmt resources/",
-        "test:lint": "vp fmt --check resources/"
+        "lint": "NODE_OPTIONS='--experimental-strip-types' vp fmt resources/",
+        "test:lint": "NODE_OPTIONS='--experimental-strip-types' vp fmt --check resources/"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.2.2",
