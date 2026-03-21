@@ -78,10 +78,10 @@ You should see 100% test coverage and all quality checks passing.
 ## Available Tooling
 
 ### Development
-- `composer dev` - Starts Laravel server, queue worker, log monitoring, and Vite dev server concurrently
+- `composer dev` - Starts Laravel server, queue worker, log monitoring, and Vite+ dev server concurrently
 
 ### Code Quality
-- `composer lint` - Runs Rector (refactoring), Pint (PHP formatting), and Prettier (JS/TS formatting)
+- `composer lint` - Runs Rector (refactoring), Pint (PHP formatting), and Oxfmt (JS/TS formatting)
 - `composer test:lint` - Dry-run mode for CI/CD pipelines
 
 ### Testing

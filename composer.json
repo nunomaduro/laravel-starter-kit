@@ -14,7 +14,7 @@
         "nunomaduro/essentials": "^1.2.0"
     },
     "require-dev": {
-        "driftingly/rector-laravel": "^2.1.12",
+        "driftingly/rector-laravel": "^2.2.0",
         "fakerphp/faker": "^1.24.1",
         "larastan/larastan": "^3.9.3",
         "laravel/boost": "^v2.3.4",

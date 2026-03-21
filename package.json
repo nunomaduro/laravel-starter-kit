@@ -2,10 +2,10 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite",
-        "lint": "prettier --write resources/",
-        "test:lint": "prettier --check resources/"
+        "build": "vp build",
+        "dev": "vp dev",
+        "lint": "vp fmt resources/",
+        "test:lint": "vp fmt --check resources/"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.2.2",
@@ -13,10 +13,12 @@
         "laravel-vite-plugin": "^3.0.0",
         "npm-check-updates": "^19.6.5",
         "playwright": "^1.58.2",
-        "prettier": "^3.8.1",
-        "prettier-plugin-organize-imports": "^4.3.0",
-        "prettier-plugin-tailwindcss": "^0.7.2",
         "tailwindcss": "^4.2.2",
-        "vite": "^8.0.1"
+        "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+        "vite-plus": "latest"
+    },
+    "overrides": {
+        "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+        "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
     }
 }
