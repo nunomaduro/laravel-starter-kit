@@ -29,7 +29,7 @@ return [
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "array", "database", "file", "memcached",
-    |                    "redis", "dynamodb", "octane", "null"
+    |                    "redis", "dynamodb", "octane", "failover", "null"
     |
     */
 
@@ -92,6 +92,14 @@ return [
             'driver' => 'octane',
         ],
 
+        'failover' => [
+            'driver' => 'failover',
+            'stores' => [
+                'database',
+                'array',
+            ],
+        ],
+
     ],
 
     /*
@@ -112,12 +120,9 @@ return [
     | Serializable Classes
     |--------------------------------------------------------------------------
     |
-    | This option controls which classes may be unserialized when retrieving
-    | items from cache stores that use PHP serialization. Setting this to
-    | `false` disables the unserialization of all objects for security.
-    |
-    | You may set this to `true` to allow all classes, or provide an array
-    | of fully-qualified class names that are allowed to be unserialized.
+    | This value determines the classes that can be unserialized from cache
+    | storage. By default, no PHP classes will be unserialized from your
+    | cache to prevent gadget chain attacks if your APP_KEY is leaked.
     |
     */
 
