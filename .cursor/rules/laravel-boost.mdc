@@ -11,16 +11,15 @@ The Laravel Boost guidelines are specifically curated by Laravel maintainers for
 ## Foundational Context
 This application is a Laravel application and its main Laravel ecosystems package & versions are below. You are an expert with them all. Ensure you abide by these specific packages & versions.
 
-- php - 8.4.17
-- laravel/framework (LARAVEL) - v12
+- php - 8.5.4
+- laravel/framework (LARAVEL) - v13
 - laravel/prompts (PROMPTS) - v0
 - larastan/larastan (LARASTAN) - v3
 - laravel/mcp (MCP) - v0
 - laravel/pint (PINT) - v1
-- pestphp/pest (PEST) - v4
+- pestphp/pest (PEST) - v5
 - phpunit/phpunit (PHPUNIT) - v12
 - rector/rector (RECTOR) - v2
-- prettier (PRETTIER) - v3
 - tailwindcss (TAILWINDCSS) - v4
 
 ## Conventions
@@ -163,15 +162,15 @@ protected function isAccessible(User $user, ?string $path = null): bool
 ### Vite Error
 - If you receive an "Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest" error, you can run `bun run build` or ask the user to run `bun run dev` or `composer run dev`.
 
-=== laravel/v12 rules ===
+=== laravel/v13 rules ===
 
-## Laravel 12
+## Laravel 13
 
 - Use the `search-docs` tool to get version-specific documentation.
 - Since Laravel 11, Laravel has a new streamlined file structure which this project uses.
 
-### Laravel 12 Structure
-- In Laravel 12, middleware are no longer registered in `app/Http/Kernel.php`.
+### Laravel 13 Structure
+- In Laravel 13, middleware are no longer registered in `app/Http/Kernel.php`.
 - Middleware are configured declaratively in `bootstrap/app.php` using `Application::configure()->withMiddleware()`.
 - `bootstrap/app.php` is the file to register middleware, exceptions, and routing files.
 - `bootstrap/providers.php` contains application specific service providers.
@@ -180,7 +179,7 @@ protected function isAccessible(User $user, ?string $path = null): bool
 
 ### Database
 - When modifying a column, the migration must include all of the attributes that were previously defined on the column. Otherwise, they will be dropped and lost.
-- Laravel 12 allows limiting eagerly loaded records natively, without external packages: `$query->latest()->limit(10);`.
+- Laravel 13 allows limiting eagerly loaded records natively, without external packages: `$query->latest()->limit(10);`.
 
 ### Models
 - Casts can and likely should be set in a `casts()` method on a model rather than the `$casts` property. Follow existing conventions from other models.
@@ -244,17 +243,17 @@ it('has emails', function (string $email) {
 ]);
 </code-snippet>
 
-=== pest/v4 rules ===
+=== pest/v5 rules ===
 
-## Pest 4
+## Pest 5
 
-- Pest 4 is a huge upgrade to Pest and offers: browser testing, smoke testing, visual regression testing, test sharding, and faster type coverage.
+- Pest 5 is a huge upgrade to Pest and offers: browser testing, smoke testing, visual regression testing, test sharding, and faster type coverage.
 - Browser testing is incredibly powerful and useful for this project.
 - Browser tests should live in `tests/Browser/`.
 - Use the `search-docs` tool for detailed guidance on utilizing these features.
 
 ### Browser Testing
-- You can use Laravel features like `Event::fake()`, `assertAuthenticated()`, and model factories within Pest 4 browser tests, as well as `RefreshDatabase` (when needed) to ensure a clean state for each test.
+- You can use Laravel features like `Event::fake()`, `assertAuthenticated()`, and model factories within Pest 5 browser tests, as well as `RefreshDatabase` (when needed) to ensure a clean state for each test.
 - Interact with the page (click, type, scroll, select, submit, drag-and-drop, touch gestures, etc.) when appropriate to complete the test.
 - If requested, test on multiple browsers (Chrome, Firefox, Safari).
 - If requested, test on different devices and viewports (like iPhone 14 Pro, tablets, or custom breakpoints).
