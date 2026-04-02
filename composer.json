@@ -23,6 +23,7 @@
         "laravel/tinker": "^v3.0.0",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.9.2",
+        "nunomaduro/pao": "0.x-dev",
         "pestphp/pest": "^5.0",
         "pestphp/pest-plugin-browser": "^5.0",
         "pestphp/pest-plugin-laravel": "^5.0",
