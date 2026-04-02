@@ -1,0 +1,4 @@
+[mcp_servers.laravel-boost]
+command = "php"
+args = ["artisan", "boost:mcp"]
+cwd = "/Users/nunomaduro/Work/projects/nunomaduro/starter-kits/laravel-starter-kit"

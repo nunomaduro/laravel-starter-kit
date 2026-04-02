@@ -3,7 +3,17 @@
         "claude_code",
         "cursor",
         "opencode",
-        "phpstorm"
+        "junie",
+        "copilot",
+        "gemini",
+        "codex",
+        "amp"
     ],
-    "guidelines": []
+    "guidelines": true,
+    "mcp": true,
+    "nightwatch_mcp": false,
+    "sail": false,
+    "skills": [
+        "laravel-best-practices"
+    ]
 }
