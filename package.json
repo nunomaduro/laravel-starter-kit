@@ -10,9 +10,9 @@
     "devDependencies": {
         "@tailwindcss/vite": "^4.2.2",
         "concurrently": "^9.2.1",
-        "laravel-vite-plugin": "^3.0.0",
-        "npm-check-updates": "^19.6.6",
-        "playwright": "^1.58.2",
+        "laravel-vite-plugin": "^3.0.1",
+        "npm-check-updates": "^20.0.0",
+        "playwright": "^1.59.1",
         "tailwindcss": "^4.2.2",
         "vite": "npm:@voidzero-dev/vite-plus-core@latest",
         "vite-plus": "latest"
