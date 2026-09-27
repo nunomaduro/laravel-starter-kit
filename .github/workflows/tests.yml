@@ -51,7 +51,9 @@ jobs:
           restore-keys: ${{ runner.os }}-bun-
 
       - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress
+        run: |
+          composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress --no-scripts
+          composer run-script post-autoload-dump
 
       - name: Copy Environment File
         run: cp .env.example .env
