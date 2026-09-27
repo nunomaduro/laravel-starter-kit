@@ -21,3 +21,6 @@ Homestead.yaml
 /.vscode
 /.zed
 /tmp
+*.log
+Thumbs.db
+_ide_helper.php

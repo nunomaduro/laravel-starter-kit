@@ -27,6 +27,11 @@ export default defineConfig({
         },
         ignorePatterns: ["resources/views/mail/*"],
     },
+    server: {
+        watch: {
+            ignored: ['**/storage/framework/views/**'],
+        },
+    },
     plugins: [
         laravel({
             input: ["resources/css/app.css", "resources/js/app.js"],
