@@ -89,7 +89,7 @@ You should see 100% test coverage and all quality checks passing.
 - `composer test:type-coverage` - Ensures 100% type coverage with Pest
 - `composer test:types` - Runs PHPStan at level 9 (maximum strictness)
 - `composer test:unit` - Runs Pest tests with 100% code coverage requirement
-- `composer test` - Runs the complete test suite (type coverage, unit tests, linting, static analysis)
+- `composer test` - Runs the complete test suite (linting, static analysis, type coverage, unit tests)
 
 ### Maintenance
 - `composer update:requirements` - Updates all PHP and Bun dependencies to latest versions

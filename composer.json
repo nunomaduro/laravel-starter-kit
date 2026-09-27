@@ -94,10 +94,10 @@
         "test:unit": "XDEBUG_MODE=\"coverage\" pest --parallel --coverage --exactly=100.0",
         "test:types": "phpstan",
         "test": [
-            "@test:type-coverage",
-            "@test:unit",
             "@test:lint",
-            "@test:types"
+            "@test:types",
+            "@test:type-coverage",
+            "@test:unit"
         ]
     },
     "extra": {
