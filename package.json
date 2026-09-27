@@ -26,5 +26,8 @@
             "version": "1.4.2",
             "onFail": "download"
         }
+    },
+    "optionalDependencies": {
+        "@laravel/multiplex": "^0.4.4"
     }
 }

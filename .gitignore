@@ -24,3 +24,4 @@ Homestead.yaml
 *.log
 Thumbs.db
 _ide_helper.php
+/public/fonts-manifest.dev.json
