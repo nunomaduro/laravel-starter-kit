@@ -8,17 +8,23 @@
         "test:lint": "NODE_OPTIONS='--experimental-strip-types' vp fmt --check resources/"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.2.2",
-        "concurrently": "^9.2.1",
-        "laravel-vite-plugin": "^3.0.1",
-        "npm-check-updates": "^21.0.2",
-        "playwright": "^1.59.1",
-        "tailwindcss": "^4.2.2",
-        "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-        "vite-plus": "latest"
+        "@tailwindcss/vite": "^4.3.3",
+        "concurrently": "^10.0.5",
+        "laravel-vite-plugin": "^3.2.0",
+        "npm-check-updates": "^23.1.0",
+        "playwright": "^1.63.0",
+        "tailwindcss": "^4.3.3",
+        "vite": "npm:@voidzero-dev/vite-plus-core@1.0.0-rc.1",
+        "vite-plus": "1.0.0-rc.1"
     },
     "overrides": {
-        "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-        "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+        "vite": "npm:@voidzero-dev/vite-plus-core@1.0.0-rc.1"
+    },
+    "devEngines": {
+        "packageManager": {
+            "name": "bun",
+            "version": "1.4.2",
+            "onFail": "download"
+        }
     }
 }
