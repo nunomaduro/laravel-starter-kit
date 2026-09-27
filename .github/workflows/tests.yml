@@ -47,7 +47,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lockb') }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock', 'package.json') }}
           restore-keys: ${{ runner.os }}-bun-
 
       - name: Install Dependencies
