@@ -89,19 +89,19 @@ jobs:
       - name: Cache Rector
         uses: actions/cache@v6
         with:
-          path: /tmp/rector
+          path: tmp/rector
           key: ${{ runner.os }}-rector-${{ hashFiles('composer.lock') }}
           restore-keys: ${{ runner.os }}-rector-
 
       - name: Cache PHPStan
         uses: actions/cache@v6
         with:
-          path: /tmp/phpstan
+          path: tmp/phpstan
           key: ${{ runner.os }}-phpstan-${{ hashFiles('composer.lock') }}
           restore-keys: ${{ runner.os }}-phpstan-
 
       - name: Create Cache Directories
-        run: mkdir -p /tmp/rector /tmp/phpstan
+        run: mkdir -p tmp/rector tmp/phpstan
 
       - name: Tests
         run: composer test
