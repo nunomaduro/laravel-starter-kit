@@ -22,7 +22,6 @@
         "laravel/pao": "^1.1.5",
         "laravel/pint": "^1.32.1",
         "laravel/tinker": "^3.0.2",
-        "laravel/vet": "^0.2.1",
         "mockery/mockery": "^1.6.15",
         "nunomaduro/collision": "^8.9.5",
         "pestphp/pest": "^5.2.1",
@@ -112,8 +111,15 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true,
-            "laravel/vet": true
+            "php-http/discovery": true
+        },
+        "policy": {
+            "cooldown": {
+                "period": "1 day",
+                "ignore": [
+                    "roave/security-advisories"
+                ]
+            }
         }
     },
     "minimum-stability": "stable",
