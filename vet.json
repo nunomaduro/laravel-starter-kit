@@ -1,7 +1,0 @@
-{
-    "minimum-release-age": 1,
-    "minimum-release-age-exclude": [
-        "laravel/vet",
-        "roave/security-advisories"
-    ]
-}
